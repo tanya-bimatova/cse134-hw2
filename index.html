@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Tatiana Bimatova's Personal Website</title>
+    <link href="images/favicon.png" rel="icon">
+
+    <style>
+      td, th{
+        border: 1px solid black;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ol>
+          <li><h2 id="nav-home">Home</h2></li>
+          <li><h2 id="nav-about">About Me</h2></li>
+          <li><h2 id="nav-contact">Contact</h2></li>
+          <li><h2 id="nav-exp">Experiments</h2></li>
+          <li>
+            <!-- TODO: add an updated resume-->
+            <a href="files/BimatovaResume.pdf" target="_blank"
+              title="Click here to open my resume" id="nav-resume">Resume</a></li>
+        </ol>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home-tab">
+        <h1>Tatiana Bimatova</h1>
+        <p>TODO: smth funny + smth interesting about myself</p>
+      </section>
+
+      <section id="about-tab">
+        <h2>Tatiana Bimatova</h2>
+        <picture>
+          <!-- TODO: pics of me in different quality-->
+          <source srcset="images/big-heart.jpg" media="(min-width: 600px)">
+          <img src="images/sm-heart.png" alt="heart image">
+        </picture>
+        <p>TODO: info about me</p>
+
+        <div id="l-box">
+          <h3>Skills</h3>
+          <ul>
+            <li>
+              <label for="html-css-js">HTML, CSS, JavaScript</label>
+              <progress id="html-css-js" max="100" value="40"> 40% </progress>
+            </li>
+            <li>
+              <label for="c++">C++</label>
+              <progress id="c++" max="100" value="70"> 70% </progress>
+            </li>
+            <li>
+              <label for="java">Java</label>
+              <progress id="java" max="100" value="70"> 70% </progress>
+            </li>
+            <li>
+              <label for="git">Git</label>
+              <progress id="git" max="100" value="80"> 80% </progress>
+            </li>
+          </ul>
+        </div>
+
+        <div id="r-box">
+          <h3>Education</h3>
+          <p>TODO: decription of my education</p>
+
+          <h3>Languages</h3>
+          <ul>
+            <li>English: Full Professional</li>
+            <li>Russian: Native</li>
+          </ul>
+        </div>
+
+      </section>
+
+      <section id="contact-tab">
+        <h3>Email: <a href="mailto:tbimatova@ucsd.edu">tbimatova@ucsd.edu</a>
+        </h3>
+        <h4>...or use the following form</h4>
+        <form method="get">
+          <fieldset>
+            <legend>Your Contact</legend>
+            <input type="text" placeholder="Your Name *"
+              id="name" required
+              data-validation-required-message="Please enter your name."
+              aria-invalid="false">
+
+            <input type="email" placeholder="Your Email *"
+              id="email" required
+              data-validation-required-message="Please enter your email address."
+              aria-invalid="false">
+
+            <input type="tel" placeholder="Your Phone"
+              id="phone" aria-invalid="false">
+          </fieldset>
+
+          <fieldset>
+            <legend>Your message</legend>
+            <textarea placeholder="Your Message *"
+              id="message" required
+              data-validation-required-message="Please enter a message."
+              aria-invalid="false"></textarea>
+          </fieldset>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+
+      <section id="experiments-tab">
+        <h3><code>&lt;div&gt;</code> alternatives</h3>
+        <p>Whenever possible, it is better to use <code>&lt;header&gt;</code>,
+          <code>&lt;head&gt;</code> or <code>&lt;section&gt;</code> because they
+          privide more <i>semantics</i>.</p>
+
+        <h3>thoughts on &lt;strong&gt;, <code>&lt;em&gt;</code> and <code>&lt;b&gt;</code></h3>
+        <p>If you have something <strong>important</strong> to say, or if you
+          want to <em>emphasise</em> something, it is suitable to use <code>&lt;strong&gt;</code>
+          and <code>&lt;em&gt;</code> tags.
+          <br>
+          However, if you just want to make something stand out <b>visually</b>,
+          use <code>&lt;b&gt;</code> instead.</p>
+
+        <h3>Grouping with <code>&lt;span&gt;</code></h3>
+        <p>Interestingly, Scandinavian countries, i.e. <span class="country">Norway</span>,
+          <span class="country">Sweden</span>, and <span class="country">Denmark</span>,
+          are usually in the top-ten happiest countries in the world.</p>
+
+        <aside>
+          <h4>Did you know?</h4>
+          The autofocus attribute is a helpful tool when creating web pages. It
+          allows an input element, such as a text box or a drop-down menu, to be
+          automatically focused on when the page loads. This is useful for
+          quickly guiding the user to the right place on the page, and making
+          the page easier to interact with.
+        </aside>
+
+        <h3>Video with Mehran Sahami</h3>
+        <p>He's one of the reasons I'm doing CS &#128526;</p>
+
+        <details>
+          <summary>Video</summary>
+          <iframe id="frame-Mehran-Sahami-video"
+            title="Programming Methodology with Mehran Sahami"
+            width="1000"
+            height="1000"
+            src="https://see.stanford.edu/Course/CS106A/194">
+          </iframe> </details>
+
+        <h3>Playing with drop-down menu (Option Group element)</h3>
+        <label for="prog-lang-select">Choose a programming language:</label>
+        <select id="prog-lang-select">
+          <optgroup label="Interpreted">
+            <option>Python</option>
+            <option>JavaScript</option>
+            <option>PHP</option>
+            <option>Ruby</option>
+          </optgroup>
+          <optgroup label="Compiled">
+            <option>C</option>
+            <option>C++</option>
+            <option>C#</option>
+            <option>Rust</option>
+            <option>Erlang</option>
+          </optgroup>
+        </select>
+
+        <h3>Exploring input elements of type range</h3>
+        <label for="tick">How comfortable are you with HTML?</label>
+        <input type="range" value="50" list="tickmarks" min="0" max="100"
+          id="tick"
+          name="tick">
+        <datalist id="tickmarks">
+          <option value="0"></option>
+          <option value="10"></option>
+          <option value="20"></option>
+          <option value="30"></option>
+          <option value="40"></option>
+          <option value="50"></option>
+          <option value="60"></option>
+          <option value="70"></option>
+          <option value="80"></option>
+          <option value="90"></option>
+          <option value="100"></option>
+        </datalist>
+
+        <h3>Exploring a table</h3>
+        <table>
+          <caption>
+            Summer Session 1 Class Schedule
+          </caption>
+          <colgroup>
+            <col>
+            <col span="5" class="Weekdays">
+            <col span="2" class="Weekend">
+          </colgroup>
+          <thead>
+            <tr>
+              <td rowspan="2">&nbsp;</td>
+              <td colspan="5">Weekdays</td>
+              <td colspan="2">Weekend</td>
+            </tr>
+            <tr>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+              <th>Saturday</th>
+              <th>Sunday</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th>8:00 AM</th>
+              <td>CSE 134B - Lecture</td>
+              <td>CSE 134B - Lecture</td>
+              <td>CSE 134B - Lecture</td>
+              <td>CSE 134B - Lecture</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <th>11:00 AM</th>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>CSE 134B - Discussion</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <td colspan="8">Table footer</td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <h3>Top Programming Languages of 2023</h3>
+        <figure>
+          <img src="images/Global-tech-trends.png"
+            alt="Global tech trends chart">
+          <figcaption>Tech trends across globe in 2023</figcaption>
+        </figure>
+
+        <h3>Exploring audio</h3>
+        <figure>
+          <figcaption>Listen to little birds chirping</figcaption>
+          <audio controls>
+            <source src="/media/birds.mp3">
+          </audio>
+        </figure>
+
+        <h3>Exploring video</h3>
+        <video controls>
+          <source src="/media/owl.mp4" type="video/mp4">
+        </video>
+
+        <h3>The Preformatted Text element</h3>
+        <pre>
+   *     *
+    *   *
+      *
+    *   *
+   *     *
+        </pre>
+
+        <h3>Canvas Example</h3>
+        <canvas id="myCanvas" width="300" height="300"></canvas>
+        <script>
+            let canvas = document.getElementById('myCanvas');
+            let context = canvas.getContext('2d');
+            context.strokeStyle = 'black';
+            context.lineWidth = 5;
+
+            /* draw a basic circle*/
+            context.beginPath();
+            context.fillStyle = 'blue';
+            context.arc(150, 150, 100, 0, Math.PI * 2, true);
+            context.fill();
+          </script>
+
+        <h3>SVG Example</h3>
+        <svg width="800" height="400">
+          <circle
+            cx="150"
+            cy="150"
+            r="100"
+            fill="blue" />
+        </svg>
+
+        <h3>Template Example</h3>
+        <template id="example-template">
+          <p>
+            My Custom Element is in the shadow DOM, however its <slot></slot> is
+            still visible on my webpage.
+          </p>
+        </template>
+        <custom-el>Content</custom-el>
+
+      </section>
+    </main>
+
+    <footer>
+      <hr>
+      <p>This page was made with &hearts; by Tatiana Bimatova </p>
+    </footer>
+
+  </body>
